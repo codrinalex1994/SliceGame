@@ -8,7 +8,7 @@ public class ShapeHeart : MonoBehaviour {
     private Vector2 enteredPosition;
     private Vector2 exitedPosition;
     private float sliceLength;
-    private float minSliceLength = 0.4f;
+    private float minSliceLength = 0.2f;
 
     private Vector3 shapeScale;
     private Vector3 hitShapeScale;
@@ -38,6 +38,7 @@ public class ShapeHeart : MonoBehaviour {
     {
         exitedPosition = collision.attachedRigidbody.transform.position;
         sliceLength = (exitedPosition - enteredPosition).magnitude;
+        Debug.Log(sliceLength);
         if( sliceLength > minSliceLength)
         {
             this.transform.localScale = hitShapeScale;
