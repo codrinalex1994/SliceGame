@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ShapeHeart : MonoBehaviour {
 
-    private int health = 50;
+    private int health = 10;
     private Vector2 enteredPosition;
     private Vector2 exitedPosition;
     private float sliceLength;
@@ -14,8 +14,13 @@ public class ShapeHeart : MonoBehaviour {
     private Vector3 hitShapeScale;
     private Vector3 scaleFactor;
 
+    public GameObject sliceCountText;
+    private TextMesh textMesh;
+
     private void Start()
     {
+        textMesh = sliceCountText.GetComponent<TextMesh>();
+        textMesh.text = health.ToString();
         shapeScale = this.transform.localScale;
         hitShapeScale = shapeScale + (shapeScale * 1 / 8);
         scaleFactor = shapeScale * 1 / 2;
@@ -38,11 +43,12 @@ public class ShapeHeart : MonoBehaviour {
     {
         exitedPosition = collision.attachedRigidbody.transform.position;
         sliceLength = (exitedPosition - enteredPosition).magnitude;
-        Debug.Log(sliceLength);
+        //Debug.Log(sliceLength);
         if( sliceLength > minSliceLength)
         {
             this.transform.localScale = hitShapeScale;
             health--;
+            textMesh.text = health.ToString();
         }
         if( health < 1)
         {

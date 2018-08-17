@@ -12,7 +12,7 @@ public class ChangeColor : MonoBehaviour {
     [SerializeField]
     private Color colorToTurnTo = Color.white;
 
-    private float startTime;
+    //private float startTime;
 
 	void Start () {
 
@@ -20,17 +20,17 @@ public class ChangeColor : MonoBehaviour {
         rend = GetComponent<Renderer>();
 
         ChangeTheColor();
-        startTime = Time.time;
+    //    startTime = Time.time;
 	}
 
-    void Update()
+    /*void Update()
     {
         if(Time.time > startTime + 1.0f)
         {
             startTime = Time.time;
             ChangeTheColor();
         }
-    }
+    }*/
 
     void ChangeTheColor()
     {
