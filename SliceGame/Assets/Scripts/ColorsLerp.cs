@@ -13,7 +13,7 @@ public class ColorsLerp : MonoBehaviour {
 
     private void Start()
     {
-        Debug.Log(colors.Length);
+        //Debug.Log(colors.Length);
         firstIndex = 0;
         secondIndex = firstIndex + 1;
         transition = 0f;

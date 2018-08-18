@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 114218101448502568}
   - component: {fileID: 60334362842252824}
   - component: {fileID: 50219483514085644}
+  - component: {fileID: 114735366365790790}
   m_Layer: 0
   m_Name: triangle
   m_TagString: Untagged
@@ -154,50 +155,9 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 2.37, y: -1.9399999}
-      - {x: 2.1399999, y: -1.54}
-      - {x: 1.9599999, y: -1.23}
-      - {x: 1.88, y: -1.09}
-      - {x: 1.81, y: -0.96999997}
-      - {x: 1.73, y: -0.83}
-      - {x: 1.66, y: -0.71}
-      - {x: 1.4399999, y: -0.32999998}
-      - {x: 0.98999995, y: 0.45}
-      - {x: 0.90999997, y: 0.59}
-      - {x: 0.84, y: 0.71}
-      - {x: 0.72999996, y: 0.9}
-      - {x: 0.61, y: 1.11}
-      - {x: 0.42999998, y: 1.42}
-      - {x: 0.19999999, y: 1.8199999}
-      - {x: 0.06, y: 2.06}
-      - {x: 0.01, y: 2.11}
-      - {x: -0.02, y: 2.1}
-      - {x: -0.08, y: 2}
-      - {x: -0.14999999, y: 1.88}
-      - {x: -0.59999996, y: 1.1}
-      - {x: -0.71, y: 0.90999997}
-      - {x: -0.78999996, y: 0.77}
-      - {x: -0.85999995, y: 0.65}
-      - {x: -1.16, y: 0.13}
-      - {x: -1.27, y: -0.06}
-      - {x: -1.35, y: -0.19999999}
-      - {x: -1.42, y: -0.32}
-      - {x: -1.5, y: -0.45999998}
-      - {x: -1.5699999, y: -0.58}
-      - {x: -1.68, y: -0.77}
-      - {x: -1.76, y: -0.90999997}
-      - {x: -1.8299999, y: -1.03}
-      - {x: -1.9799999, y: -1.29}
-      - {x: -2.06, y: -1.43}
-      - {x: -2.1299999, y: -1.55}
-      - {x: -2.35, y: -1.93}
-      - {x: -2.4199998, y: -2.06}
-      - {x: -2.4199998, y: -2.09}
-      - {x: -2.3999999, y: -2.11}
-      - {x: 2.4199998, y: -2.11}
-      - {x: 2.44, y: -2.1}
-      - {x: 2.44, y: -2.07}
-      - {x: 2.4199998, y: -2.01}
+    - - {x: 0, y: 2.1}
+      - {x: -2.4, y: -2.1}
+      - {x: 2.42, y: -2.09}
 --- !u!102 &102567706679542328
 TextMesh:
   serializedVersion: 3
@@ -242,8 +202,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7be4fbc073326243a40d4acf8d74226, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameObject: {fileID: 0}
+  colorKeeper: {fileID: 0}
   colorToTurnTo: {r: 0.111371756, g: 1, b: 0, a: 1}
+--- !u!114 &114735366365790790
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1515837797677210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4811c54ba2a9e7a4db1e6531ba67fd66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212230978802739962
 SpriteRenderer:
   m_ObjectHideFlags: 1
