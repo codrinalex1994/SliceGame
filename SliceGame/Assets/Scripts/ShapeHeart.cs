@@ -61,4 +61,9 @@ public class ShapeHeart : MonoBehaviour {
             }
         }
     }
+
+    public void SetShapeLife(int health)
+    {
+        this.health = health;
+    }
 }

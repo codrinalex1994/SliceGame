@@ -148,7 +148,8 @@ MonoBehaviour:
   - {x: 3, y: 6}
   - {x: 3, y: -6}
   - {x: -3, y: -6}
-  spawnTime: 2
+  spawnTime: 1
+  spawnTimeInc: 0.1
 --- !u!4 &376053900
 Transform:
   m_ObjectHideFlags: 0

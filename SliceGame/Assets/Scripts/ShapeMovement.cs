@@ -47,6 +47,11 @@ public class ShapeMovement : MonoBehaviour {
     {
         destinationPoint = new Vector2(x, y);
         startMove = true;
-        Debug.Log(destinationPoint);
+        //Debug.Log(destinationPoint);
+    }
+
+    public void SetMovementDuration(float movementDuration)
+    {
+        this.movementDuration = movementDuration;
     }
 }
