@@ -36,23 +36,29 @@ public class ShapeHeart : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        enteredPosition = collision.attachedRigidbody.transform.position;
+        if (collision.CompareTag("Blade"))
+        {
+            enteredPosition = collision.attachedRigidbody.transform.position;
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        exitedPosition = collision.attachedRigidbody.transform.position;
-        sliceLength = (exitedPosition - enteredPosition).magnitude;
-        //Debug.Log(sliceLength);
-        if( sliceLength > minSliceLength)
+        if (collision.CompareTag("Blade"))
         {
-            this.transform.localScale = hitShapeScale;
-            health--;
-            textMesh.text = health.ToString();
-        }
-        if( health < 1)
-        {
-            Destroy(this.gameObject);
+            exitedPosition = collision.attachedRigidbody.transform.position;
+            sliceLength = (exitedPosition - enteredPosition).magnitude;
+            //Debug.Log(sliceLength);
+            if (sliceLength > minSliceLength)
+            {
+                this.transform.localScale = hitShapeScale;
+                health--;
+                textMesh.text = health.ToString();
+            }
+            if (health < 1)
+            {
+                Destroy(this.gameObject);
+            }
         }
     }
 }

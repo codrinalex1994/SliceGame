@@ -25,20 +25,22 @@ public class Blade : MonoBehaviour {
     }
 
     void Update () {
-        if (Input.GetMouseButtonDown(0))
+        if(Time.timeScale != 0)
         {
-            StartCutting();
-        }
-        else if (Input.GetMouseButtonUp(0))
-        {
-            StopCutting();
-        }
-        
-        if (isCutting)
-        {
-            UpdateCut();
-        }
+            if (Input.GetMouseButtonDown(0))
+            {
+                StartCutting();
+            }
+            else if (Input.GetMouseButtonUp(0))
+            {
+                StopCutting();
+            }
 
+            if (isCutting)
+            {
+                UpdateCut();
+            }
+        }
 	}
 
     void StartCutting()
