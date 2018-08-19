@@ -142,7 +142,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shapes:
   - {fileID: 1515837797677210, guid: 8cd38d7630652a54f8f355f1c9534ff2, type: 2}
-  - {fileID: 1515837797677210, guid: 8cd38d7630652a54f8f355f1c9534ff2, type: 2}
+  - {fileID: 1012401382866848, guid: 78c940bb9135b834cb4dbe017511000e, type: 2}
+  - {fileID: 1699378467952086, guid: 8ab9af4c80e96904ca37d1d48edd1d5d, type: 2}
+  - {fileID: 1373254512104124, guid: ea271ccb395b2c9479cb5877f50b0b98, type: 2}
   shapesCoordinates:
   - {x: -3, y: 6}
   - {x: 3, y: 6}

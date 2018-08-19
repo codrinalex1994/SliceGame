@@ -6,7 +6,8 @@ public class ColorsLerp : MonoBehaviour {
 
 	public Color[] colors;
 
-    private float transition;
+    private float transitionLerp;
+    private float transitionLerpInc = 0.3f;
     private int firstIndex;
     private int secondIndex;
     private Color lerpedColor;
@@ -16,14 +17,14 @@ public class ColorsLerp : MonoBehaviour {
         //Debug.Log(colors.Length);
         firstIndex = 0;
         secondIndex = firstIndex + 1;
-        transition = 0f;
+        transitionLerp = 0f;
     }
 
 	public Color PickColor()
     {
-        if(transition >= 1.0f)
+        if(transitionLerp >= 1.0f)
         {
-            transition = 0f;
+            transitionLerp = 0f;
             firstIndex++;
             if(firstIndex == colors.Length)
             {
@@ -36,8 +37,8 @@ public class ColorsLerp : MonoBehaviour {
             }
 
         }
-        lerpedColor = Color.Lerp(colors[firstIndex], colors[secondIndex], transition);
-        transition += 0.2f;
+        lerpedColor = Color.Lerp(colors[firstIndex], colors[secondIndex], transitionLerp);
+        transitionLerp += transitionLerpInc;
         return lerpedColor;
     }
 }
