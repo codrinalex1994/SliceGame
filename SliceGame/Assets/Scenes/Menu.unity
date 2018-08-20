@@ -224,6 +224,11 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: be768f0d8e3f6b049adf1a1d681724b4,
         type: 3}
+    - target: {fileID: 198543611113323336, guid: e601f3aaea14968448a788e7acf934e0,
+        type: 2}
+      propertyPath: startDelay.scalar
+      value: 0.75
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e601f3aaea14968448a788e7acf934e0, type: 2}
   m_IsPrefabParent: 0
@@ -495,6 +500,11 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: ebfc31362835e3243ae830df0a56418a,
         type: 3}
+    - target: {fileID: 198543611113323336, guid: e601f3aaea14968448a788e7acf934e0,
+        type: 2}
+      propertyPath: startDelay.scalar
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e601f3aaea14968448a788e7acf934e0, type: 2}
   m_IsPrefabParent: 0
@@ -557,6 +567,11 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: c5429a3825bb604429a4936c185a2c94,
         type: 3}
+    - target: {fileID: 198543611113323336, guid: e601f3aaea14968448a788e7acf934e0,
+        type: 2}
+      propertyPath: startDelay.scalar
+      value: 0.25
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e601f3aaea14968448a788e7acf934e0, type: 2}
   m_IsPrefabParent: 0

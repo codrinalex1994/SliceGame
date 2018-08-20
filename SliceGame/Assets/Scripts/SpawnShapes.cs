@@ -38,7 +38,7 @@ public class SpawnShapes : MonoBehaviour {
 
     private void SpawnShape()
     {
-        spawnDotScript.SetNoOfDots((lastHealth - 1) / 10 + 1);
+        spawnDotScript.SetNoOfDots((lastHealth - 1) / 10 + 2);
         int shapeIndex = Random.Range(0, shapes.Length);
         int shapeCoordinatesIndex = Random.Range(0, shapesCoordinates.Length);
         GameObject shape = Instantiate(shapes[shapeIndex], shapesCoordinates[shapeCoordinatesIndex], Quaternion.identity);
