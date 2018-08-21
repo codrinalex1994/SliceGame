@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class SpawnShapes : MonoBehaviour {
 
-    public GameObject spawnDot;
-    private SpawnDot spawnDotScript;
+    //public GameObject spawnDot;
+    //private SpawnDot spawnDotScript;
 
     public GameObject[] shapes;
 
@@ -23,7 +23,7 @@ public class SpawnShapes : MonoBehaviour {
 
     private void Start()
     {
-        spawnDotScript = spawnDot.GetComponent<SpawnDot>(); 
+        //spawnDotScript = spawnDot.GetComponent<SpawnDot>(); 
         lastSpawnTime = Time.time;
     }
 
@@ -38,7 +38,7 @@ public class SpawnShapes : MonoBehaviour {
 
     private void SpawnShape()
     {
-        spawnDotScript.SetNoOfDots((lastHealth - 1) / 10 + 2);
+        //spawnDotScript.SetNoOfDots((lastHealth - 1) / 10 + 2);
         int shapeIndex = Random.Range(0, shapes.Length);
         int shapeCoordinatesIndex = Random.Range(0, shapesCoordinates.Length);
         GameObject shape = Instantiate(shapes[shapeIndex], shapesCoordinates[shapeCoordinatesIndex], Quaternion.identity);
@@ -48,8 +48,8 @@ public class SpawnShapes : MonoBehaviour {
         shapeMovement.SetDestinationPoint( -1 * shapesCoordinates[shapeCoordinatesIndex].x, -1 * shapesCoordinates[shapeCoordinatesIndex].y);
         lastHealth++;
         spawnTime += spawnTimeInc;
+        spawnTimeInc += 0.005f;
         movementDuration += movementDurationInc;
         movementDurationInc += 0.005f;
-        spawnTimeInc += 0.005f;
     }
 }

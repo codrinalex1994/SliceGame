@@ -6,6 +6,7 @@ TagManager:
   tags:
   - ColorKeeper
   - Blade
+  - Obstacle
   layers:
   - Default
   - TransparentFX

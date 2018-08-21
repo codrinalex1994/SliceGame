@@ -17,6 +17,8 @@ public class ShapeHeart : MonoBehaviour {
     public GameObject sliceCountText;
     private TextMesh textMesh;
 
+    private bool isCollidingWithCursor = false;
+
     private void Start()
     {
         textMesh = sliceCountText.GetComponent<TextMesh>();
@@ -39,6 +41,18 @@ public class ShapeHeart : MonoBehaviour {
         if (collision.CompareTag("Blade"))
         {
             enteredPosition = collision.attachedRigidbody.transform.position;
+            isCollidingWithCursor = true;
+        }
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (!collision.CompareTag("Blade") && isCollidingWithCursor)
+        {
+            if (collision.CompareTag("Obstacle"))
+            {
+                Destroy(collision.gameObject);
+            }
         }
     }
 
@@ -46,6 +60,7 @@ public class ShapeHeart : MonoBehaviour {
     {
         if (collision.CompareTag("Blade"))
         {
+            isCollidingWithCursor = false;
             exitedPosition = collision.attachedRigidbody.transform.position;
             sliceLength = (exitedPosition - enteredPosition).magnitude;
             //Debug.Log(sliceLength);

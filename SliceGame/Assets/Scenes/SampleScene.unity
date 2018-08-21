@@ -113,6 +113,53 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &15605534
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 15605536}
+  - component: {fileID: 15605535}
+  m_Layer: 0
+  m_Name: ShapeObstacleSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &15605535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 15605534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b079084dc50730f48855dd70ba12a0df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shapes:
+  - {fileID: 1598841141911614, guid: 7824630a83ea1654d9fd11e3b20df08f, type: 2}
+  - {fileID: 1511399767655064, guid: c85dd6072502daa419291328f8e4b425, type: 2}
+  - {fileID: 1591521754723674, guid: 575da59335e7bf64f9b69fa3d79e35d1, type: 2}
+  - {fileID: 1039841712629200, guid: c70e9e1b0d04bd74f88c721291cfec67, type: 2}
+  spawnTime: 1
+  spawnTimeDec: 0.005
+--- !u!4 &15605536
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 15605534}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &376053898
 GameObject:
   m_ObjectHideFlags: 0
@@ -140,7 +187,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3acba2a55cd5e3848b8aa6de1ecf68b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnDot: {fileID: 1813928699}
   shapes:
   - {fileID: 1515837797677210, guid: 8cd38d7630652a54f8f355f1c9534ff2, type: 2}
   - {fileID: 1012401382866848, guid: 78c940bb9135b834cb4dbe017511000e, type: 2}
@@ -296,49 +342,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1813928699
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1813928701}
-  - component: {fileID: 1813928700}
-  m_Layer: 0
-  m_Name: DotsSpawner
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1813928700
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1813928699}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9bdb6976f54e3146bd45cb224d7926f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dot: {fileID: 1180049183912984, guid: b16558cdf6935c74c923e725e34122bb, type: 2}
-  spawnDistanceX: 2.5
-  spawnDistanceY: 4.5
---- !u!4 &1813928701
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1813928699}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1958525542
 GameObject:
   m_ObjectHideFlags: 0
@@ -401,7 +404,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!58 &1958525546
 CircleCollider2D:
